@@ -16,7 +16,7 @@ import java.util.LinkedList;
 public final class MapScanner {
     private static final int _BLACK = -16777216;
 
-    public static Node[] GetGraph(String terrainImgPath) throws IOException {
+    public static ImgProcessingResults GetGraph(String terrainImgPath) throws IOException {
         File f = new File(terrainImgPath);
         BufferedImage image = ImageIO.read(f);
         int width = image.getWidth();
@@ -56,8 +56,8 @@ public final class MapScanner {
             }
         }
 
-
-        return graph;
+        ImgProcessingResults img = new ImgProcessingResults(graph, new Point(5,5), new Point(width-5, height-5), height, width);
+        return img;
     }
 
     public static void ImgCorrection(String path) throws IOException {

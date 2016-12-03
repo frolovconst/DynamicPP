@@ -1,6 +1,7 @@
 package Testbench;
 
 import Algo.MapScanner;
+import Algo.Traveller;
 
 import java.io.IOException;
 
@@ -10,7 +11,8 @@ import java.io.IOException;
 public class Testing {
     public static void main(String []args){
         try {
-            MapScanner.GetGraph("map.png");
+            MapScanner.ImgCorrection("map.png");
+            Traveller.TravelAcrossImage("map.png", "map_results.png", "map_debug.png");
         } catch (IOException e) {
             e.printStackTrace();
         }
