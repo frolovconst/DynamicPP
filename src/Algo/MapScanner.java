@@ -69,8 +69,11 @@ public final class MapScanner {
         for(int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 crntClr = image.getRGB(j, i);
-                if (crntClr != -1 && crntClr != -65536) {
+                if (crntClr < -2000000){//-1 && crntClr != -65536) {
                     image.setRGB(j, i, _BLACK);
+                }
+                else{
+                    image.setRGB(j, i, -1);
                 }
             }
         }

@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Testing {
     public static void main(String []args){
         try {
-            MapScanner.ImgCorrection("map.png");
+//            MapScanner.ImgCorrection("map.jpg");
             Traveller.TravelAcrossImage("map.png", "map_results.png", "map_debug.png");
         } catch (IOException e) {
             e.printStackTrace();
